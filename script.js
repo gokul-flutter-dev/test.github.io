@@ -1,6 +1,6 @@
 var sendBtn = document.getElementById("sendBtn");
 var output = document.getElementById("output");
-var playVideo = document.getElementById("sendBtn");
+var playVideo = document.getElementById("playVideo");
 
 sendBtn.addEventListener("click", async function () {
   try {
