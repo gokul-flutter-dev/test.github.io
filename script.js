@@ -1,6 +1,7 @@
 var sendBtn = document.getElementById("sendBtn");
 var output = document.getElementById("output");
 var playVideo = document.getElementById("playVideo");
+var openCamera= document.getElementById("openCamera");
 
 sendBtn.addEventListener("click", async function () {
   try {
@@ -22,3 +23,15 @@ playVideo.addEventListener("click",async function(){
       output.innerText = "Error: " + e;
     }
 });
+
+openCamera.addEventListener("click",async function(){
+ try {
+      const response = await webf.methodChannel.invokeMethod("openCamera", [
+        "camera is opened"
+      ]);
+      output.textContent = "Response" + response;
+    } catch (e) {
+      output.innerText = "Error: " + e;
+    }
+});
+
